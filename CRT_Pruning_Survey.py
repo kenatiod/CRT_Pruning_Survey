@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CRT_Prune_Survey.py — version 3
+CRT_Pruning_Survey.py — version 3
 ================================
 Pure CRT partition survey for large omega — no Pell solver required.
 
@@ -79,13 +79,13 @@ Both are hereditary: they hold for every omega' >= omega at the same B.
 
 Usage
 -----
-python3 CRT_Prune_Survey_V3.py --start_omega 33 --end_omega 40 \\
+python3 CRT_Pruning_Survey.py --start_omega 33 --end_omega 40 \\
     --bound_expo 50 --workers 10
 
-python3 CRT_Prune_Survey_V3.py --omega_list 28,29,30,31,32 \\
+python3 CRT_Pruning_Survey.py --omega_list 28,29,30,31,32 \\
     --bound_expo 31 --workers 10
 
-python3 CRT_Prune_Survey_V3.py --start_omega 30 --end_omega 35 \\
+python3 CRT_Pruning_Survey.py --start_omega 30 --end_omega 35 \\
     --bound_expo 0   # bound=0: find absolute min n_CRT only
 
 By Ken Clements, June 2026.
@@ -111,7 +111,7 @@ try:
 except Exception:
     pass
 
-PROGRAM_NAME = "CRT_Prune_Survey"
+PROGRAM_NAME = "CRT_Pruning_Survey"
 PROGRAM_VERSION = 3
 
 DEFAULT_CAP_PER_TASK = 1_000
