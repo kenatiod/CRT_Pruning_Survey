@@ -90,6 +90,24 @@ python3 CRT_Pruning_Survey.py --start_omega 30 --end_omega 35 \\
 
 By Ken Clements, June 2026.
 Version 3 changes co-developed with Claude (Anthropic).
+
+Version 4 changes over version 3
+---------------------------------
+1. FLOOR-MARGIN BOUND POLICY (proof-critical).  The v3 pre-flight only
+   enforced B < M, which keeps the census certificate SOUND but does not
+   keep it MEANINGFUL: as omega grows the floor sqrt(M_omega) rises, and a
+   fixed bound B = 10^E eventually drops BELOW the floor, at which point the
+   certificate "no prime-complete pair with m <= B" is vacuous (the floor
+   identity already forces m >= sqrt(M_omega) - 1 > B).  v4 adds
+   --floor_margin D, which sets the per-omega bound to
+       log10(B) = ceil(0.5*log10(M_omega) + D),
+   holding a UNIFORM margin of D decades ABOVE the floor at every omega, and
+   --min_floor_margin, which aborts (and, under a uniform-margin policy,
+   stops the run cleanly) the moment that margin cannot be held.  The result
+   JSON now records floor_log10, floor_margin_decades, and
+   floor_margin_nonneg so each certificate carries the one quantity the
+   termination proof depends on.  --bound_expo still works as before for
+   single-omega or fixed-B runs.
 """
 
 from __future__ import annotations
@@ -112,7 +130,7 @@ except Exception:
     pass
 
 PROGRAM_NAME = "CRT_Pruning_Survey"
-PROGRAM_VERSION = 3
+PROGRAM_VERSION = 4
 
 DEFAULT_CAP_PER_TASK = 1_000
 DEFAULT_CAP_TOTAL    = 100_000
@@ -594,8 +612,24 @@ def main() -> None:
     ap.add_argument("--omega_list",   type=str, default="",
                     help="Comma-separated omega values (overrides start/end).")
     ap.add_argument("--bound_expo",   type=int, default=40,
-                    help="B = 10^E.  0 = find minimum n_CRT only.  "
-                         "Must satisfy 10^E < primorial(omega).")
+                    help="B = 10^E, a FIXED exponent for all omega.  "
+                         "0 = find minimum n_CRT only.  Must satisfy "
+                         "10^E < primorial(omega).  NOTE: with a fixed E the "
+                         "margin ABOVE THE FLOOR (E - 0.5*log10(M_omega)) "
+                         "shrinks as omega grows and can go negative, making "
+                         "the certificate vacuous though still 'valid'.  For a "
+                         "uniform margin across a range, use --floor_margin.")
+    ap.add_argument("--floor_margin", type=float, default=None,
+                    help="Per-omega bound chosen so that "
+                         "log10(B) = ceil(0.5*log10(M_omega)) + this many "
+                         "decades ABOVE THE FLOOR sqrt(M_omega).  Overrides "
+                         "--bound_expo.  Guarantees a UNIFORM safety margin at "
+                         "every omega in the run (this is the quantity the "
+                         "termination proof depends on, not B<M).")
+    ap.add_argument("--min_floor_margin", type=float, default=None,
+                    help="Abort an omega if its achievable floor margin would "
+                         "fall below this many decades.  Use to stop cleanly "
+                         "the moment the margin would compress.")
     ap.add_argument("--workers",      type=int, default=0)
     ap.add_argument("--chunk_size",   type=int, default=1,
                     help="Tasks per pool chunk (default 1; tasks are large).")
@@ -604,6 +638,9 @@ def main() -> None:
     ap.add_argument("--outdir",
                     default=f"{PROGRAM_NAME}_v{PROGRAM_VERSION}_results")
     ap.add_argument("--skip_done",    action="store_true")
+    ap.add_argument("--dry_run",      action="store_true",
+                    help="Print the pre-flight table (floor, bound, margin) "
+                         "and exit without running any survey.")
     ap.add_argument("--survivor_cap_per_task", type=int,
                     default=DEFAULT_CAP_PER_TASK,
                     help="Max survivors STORED per task (counting and the "
@@ -614,7 +651,40 @@ def main() -> None:
     args = ap.parse_args()
 
     workers = args.workers if args.workers > 0 else (cpu_count() or 4)
-    bound   = 10 ** args.bound_expo if args.bound_expo > 0 else 0
+
+    # Bound policy.  Either a fixed exponent (--bound_expo) or a per-omega
+    # exponent that holds a uniform margin above the floor (--floor_margin).
+    use_floor_margin = args.floor_margin is not None
+
+    def bound_for_omega(om: int) -> Tuple[int, Optional[str]]:
+        """Return (bound, abort_reason).  abort_reason is None when usable."""
+        ps = primes_first_n(om)
+        lm = log10_primorial(ps)
+        floor_log = lm / 2.0
+        if use_floor_margin:
+            E = math.ceil(floor_log + args.floor_margin)
+            achieved_margin = E - floor_log
+            if E >= lm:
+                # B must stay < M; if holding the margin would breach that,
+                # there is no usable bound at this omega.
+                return 0, (f"floor margin {args.floor_margin} needs "
+                           f"E={E} >= log10(M)={lm:.2f}: B<M impossible")
+            if (args.min_floor_margin is not None
+                    and achieved_margin < args.min_floor_margin):
+                return 0, (f"achievable floor margin {achieved_margin:.2f} "
+                           f"< requested minimum {args.min_floor_margin}")
+            return 10 ** E, None
+        else:
+            if args.bound_expo <= 0:
+                return 0, None  # find-min-only mode
+            E = args.bound_expo
+            achieved_margin = E - floor_log
+            if (args.min_floor_margin is not None
+                    and achieved_margin < args.min_floor_margin):
+                return 0, (f"fixed E={E} gives floor margin "
+                           f"{achieved_margin:.2f} < requested minimum "
+                           f"{args.min_floor_margin} at omega={om}")
+            return 10 ** E, None
 
     if args.omega_list:
         omegas = [int(x.strip()) for x in args.omega_list.split(",")
@@ -624,34 +694,56 @@ def main() -> None:
 
     print(f"[+] {PROGRAM_NAME} version {PROGRAM_VERSION}")
     print(f"[+] omega range: {omegas}")
-    if bound > 0:
-        print(f"[+] bound B = 10^{args.bound_expo}")
+    if use_floor_margin:
+        print(f"[+] bound policy: per-omega, {args.floor_margin} decades "
+              f"ABOVE the floor sqrt(M_omega) (uniform margin)")
+    elif args.bound_expo > 0:
+        print(f"[+] bound policy: FIXED B = 10^{args.bound_expo} "
+              f"(floor margin varies with omega — see table)")
+    else:
+        print("[+] bound: find minimum n_CRT only (no pruning)")
+    if args.min_floor_margin is not None:
+        print(f"[+] will ABORT any omega whose floor margin < "
+              f"{args.min_floor_margin} decades")
+    if not use_floor_margin and args.bound_expo > 0 or use_floor_margin:
         print(f"[+] survivor storage caps: {args.survivor_cap_per_task}/task, "
               f"{args.survivor_cap_total} aggregate "
               f"(counting and census checks are uncapped)")
-    else:
-        print("[+] bound: find minimum n_CRT only (no pruning)")
     print(f"[+] workers={workers}  chunk_size={args.chunk_size}  "
           f"task_log2={args.task_log2}")
     print(f"[+] outdir: {args.outdir}")
     print()
 
-    if bound > 0:
-        print(f"  {'omega':>5}  {'log10(M)':>10}  {'log10(B)':>9}  "
-              f"{'B < M?':>8}  {'est. survivor count':>22}")
-        print("  " + "-" * 62)
+    # Pre-flight table: show floor, bound, B<M, and — crucially — the margin
+    # ABOVE THE FLOOR, which is the quantity the proof relies on.
+    if use_floor_margin or args.bound_expo > 0:
+        print(f"  {'omega':>5}  {'log10(M)':>9}  {'floor':>8}  "
+              f"{'log10(B)':>9}  {'B<M?':>5}  {'margin>floor':>12}  "
+              f"{'status':>8}")
+        print("  " + "-" * 70)
         for om in omegas:
             ps = primes_first_n(om)
             lm = log10_primorial(ps)
-            lb = args.bound_expo
-            safe = "YES" if lb < lm else "*** NO — WILL ABORT ***"
-            if lb < lm:
-                est = (2 ** om) * 10 ** (lb - lm)
-                est_str = f"~{est:.2e}"
+            floor_log = lm / 2.0
+            b, reason = bound_for_omega(om)
+            if b > 0:
+                lb = math.log10(b)
+                bok = "YES" if lb < lm else "NO"
+                marg = lb - floor_log
+                status = "OK" if (lb < lm and marg >= 0) else "*** BAD ***"
+                print(f"  {om:>5}  {lm:>9.2f}  {floor_log:>8.2f}  "
+                      f"{lb:>9.2f}  {bok:>5}  {marg:>12.2f}  {status:>8}")
             else:
-                est_str = "ALL"
-            print(f"  {om:>5}  {lm:>10.2f}  {lb:>9}  {safe:>8}  {est_str:>22}")
+                print(f"  {om:>5}  {lm:>9.2f}  {floor_log:>8.2f}  "
+                      f"{'—':>9}  {'—':>5}  {'—':>12}  "
+                      f"{'SKIP' if reason else 'find-min':>8}")
+                if reason:
+                    print(f"          reason: {reason}")
         print()
+
+    if args.dry_run:
+        print("[+] dry run: pre-flight table only, no surveys executed.")
+        return
 
     print(f"[+] start: {utc_now_iso()}\n")
     ensure_dir(args.outdir)
@@ -665,6 +757,22 @@ def main() -> None:
         if args.skip_done and os.path.isfile(result_path):
             print(f"[=] omega={omega}: result exists, skipping.")
             continue
+
+        bound, skip_reason = bound_for_omega(omega)
+        if skip_reason is not None:
+            print(f"[!] omega={omega}: SKIPPED — {skip_reason}")
+            # If we are holding a uniform margin and hit the ceiling, every
+            # higher omega will also fail: stop the run cleanly here.
+            if use_floor_margin or args.min_floor_margin is not None:
+                print(f"[!] floor margin can no longer be held; "
+                      f"stopping at omega={omega-1}.")
+                break
+            continue
+
+        ps_om = primes_first_n(omega)
+        lm_om = log10_primorial(ps_om)
+        floor_margin_achieved = (math.log10(bound) - lm_om / 2.0
+                                 if bound > 0 else None)
 
         with open(log_path, "a", encoding="utf-8") as logf:
             try:
@@ -687,6 +795,15 @@ def main() -> None:
         result["version"]    = PROGRAM_VERSION
         result["run_utc"]    = utc_now_iso()
         result["platform"]   = platform.platform()
+        # Proof-relevant margin: decades by which the survey bound B exceeds the
+        # floor sqrt(M_omega).  A census/all-pruned certificate is only NON-VACUOUS
+        # when this is >= 0 (and the intended safety margin when >= target).
+        result["floor_log10"]          = float(f"{lm_om/2.0:.4f}")
+        result["floor_margin_decades"] = (float(f"{floor_margin_achieved:.4f}")
+                                          if floor_margin_achieved is not None
+                                          else None)
+        result["floor_margin_nonneg"]  = (floor_margin_achieved is not None
+                                          and floor_margin_achieved >= 0)
 
         with open(result_path, "w", encoding="utf-8") as f:
             json.dump(result, f, indent=2, sort_keys=True)
@@ -702,6 +819,8 @@ def main() -> None:
                   f"PRIME-COMPLETE SURVIVOR(S) !!!"
                   if result["prime_complete_survivors"] > 0 else "")
 
+        marg_str = (f"  floor_margin={result['floor_margin_decades']:.2f}dec"
+                    if result.get("floor_margin_decades") is not None else "")
         print(
             f"[>] omega={omega:2d}  pmax={result['pmax']:4d}  "
             f"M_digits={result['M_digits']:3d}  "
@@ -709,7 +828,7 @@ def main() -> None:
             f"pc={result['prime_complete_survivors']}  "
             f"min_n_crt=10^{result['log10_global_min']:.2f}  "
             f"time={result['elapsed_sec']/60:.2f}min"
-            f"{cert_str}{pc_str}"
+            f"{marg_str}{cert_str}{pc_str}"
         )
 
     print(f"\n[+] Finished. {utc_now_iso()}")
