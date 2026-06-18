@@ -1,29 +1,29 @@
 {
   "M_digits": 27,
-  "all_partitions_pruned": false,
-  "bound": 10000000000000000000000,
-  "bound_str": "10000000000000000000000",
+  "all_partitions_pruned": true,
+  "bound": 100000000000000000,
+  "bound_str": "100000000000000000",
   "cap_statistics": {
     "survivor_cap_hit": false,
     "survivor_count_is_exact": true,
-    "survivor_count_true": 13,
+    "survivor_count_true": 0,
     "survivors_capped_per_task": 1000,
     "survivors_capped_total": 100000
   },
-  "census_prime_count": 29,
-  "census_prime_max": 109,
+  "census_prime_count": 24,
+  "census_prime_max": 89,
   "certificates": {
-    "all_pruned_certificate": false,
-    "all_pruned_statement": null,
+    "all_pruned_certificate": true,
+    "all_pruned_statement": "For every level omega' >= 20: no integer m with 1 <= m <= 10^17.0 satisfies p | m(m+1) for all p <= 71 (hence no prime-complete pair).  Hereditary by refinement of congruence systems.",
     "census_certificate": true,
-    "census_statement": "For every level omega' >= 20: no prime-complete pair (m, m+1) with m <= 10^22.0 exists.  Each surviving class has exactly one member <= B (B < M), every such member was checked for intrinsic prime-completeness, and none passed.  Independent of storage caps; hereditary by refinement.",
+    "census_statement": "For every level omega' >= 20: no prime-complete pair (m, m+1) with m <= 10^17.0 exists.  Each surviving class has exactly one member <= B (B < M), every such member was checked for intrinsic prime-completeness, and none passed.  Independent of storage caps; hereditary by refinement.",
     "heredity_lemma": "Adding the (omega+1)-th prime's congruence refines every class, so class minima are nondecreasing in omega and any certificate at omega_0 holds for all omega >= omega_0 at the same bound."
   },
   "chunk_size": 1,
-  "elapsed_sec": 0.14407730102539062,
+  "elapsed_sec": 0.15039825439453125,
   "errors": [],
   "floor_log10": 13.3733,
-  "floor_margin_decades": 8.6267,
+  "floor_margin_decades": 3.6267,
   "floor_margin_nonneg": true,
   "global_min_n_crt": 696537082207206753590,
   "global_min_n_crt_str": "696537082207206753590",
@@ -54,7 +54,7 @@
     ]
   },
   "log10_M": 26.7466,
-  "log10_bound": 22.0,
+  "log10_bound": 17.0,
   "log10_global_min": 20.8429,
   "omega": 20,
   "pc_storage_cap_hit": false,
@@ -64,416 +64,12 @@
   "prime_complete_survivors": 0,
   "program": "CRT_Pruning_Survey",
   "run_clean": true,
-  "run_utc": "2026-06-18T01:25:52+00:00",
-  "sha256_log": "01ddef33d9e776caba859aa8c47ba690606477df2d8ac384c8db45a5e7de09ea",
+  "run_utc": "2026-06-18T17:37:51+00:00",
+  "sha256_log": "244033e8b0ea61a87475fbd2972aa1f0ad032b79dfdad33e37e3082efcb9224a",
   "split_H": 4,
   "split_L": 16,
-  "survivor_details": [
-    {
-      "mask": 16802,
-      "n_crt": 696537082207206753590,
-      "n_crt_str": "696537082207206753590",
-      "partition": {
-        "A_divides_m": [
-          2,
-          5,
-          7,
-          11,
-          17,
-          29,
-          31,
-          37,
-          41,
-          43,
-          53,
-          59,
-          61,
-          67,
-          71
-        ],
-        "B_divides_m_plus_1": [
-          3,
-          13,
-          19,
-          23,
-          47
-        ]
-      }
-    },
-    {
-      "mask": 985732,
-      "n_crt": 1002098000340599356194,
-      "n_crt_str": "1002098000340599356194",
-      "partition": {
-        "A_divides_m": [
-          2,
-          3,
-          7,
-          11,
-          13,
-          17,
-          23,
-          31,
-          41,
-          43,
-          47,
-          53
-        ],
-        "B_divides_m_plus_1": [
-          5,
-          19,
-          29,
-          37,
-          59,
-          61,
-          67,
-          71
-        ]
-      }
-    },
-    {
-      "mask": 450729,
-      "n_crt": 2968399145019704007975,
-      "n_crt_str": "2968399145019704007975",
-      "partition": {
-        "A_divides_m": [
-          3,
-          5,
-          11,
-          17,
-          23,
-          29,
-          31,
-          37,
-          41,
-          59,
-          71
-        ],
-        "B_divides_m_plus_1": [
-          2,
-          7,
-          13,
-          19,
-          43,
-          47,
-          53,
-          61,
-          67
-        ]
-      }
-    },
-    {
-      "mask": 941576,
-      "n_crt": 4117717154669651817570,
-      "n_crt_str": "4117717154669651817570",
-      "partition": {
-        "A_divides_m": [
-          2,
-          3,
-          5,
-          11,
-          13,
-          17,
-          19,
-          23,
-          43,
-          53,
-          59
-        ],
-        "B_divides_m_plus_1": [
-          7,
-          29,
-          31,
-          37,
-          41,
-          47,
-          61,
-          67,
-          71
-        ]
-      }
-    },
-    {
-      "mask": 543261,
-      "n_crt": 4651829476527452806509,
-      "n_crt_str": "4651829476527452806509",
-      "partition": {
-        "A_divides_m": [
-          3,
-          13,
-          17,
-          19,
-          23,
-          31,
-          41,
-          43,
-          53,
-          59,
-          61,
-          67
-        ],
-        "B_divides_m_plus_1": [
-          2,
-          5,
-          7,
-          11,
-          29,
-          37,
-          47,
-          71
-        ]
-      }
-    },
-    {
-      "mask": 721835,
-      "n_crt": 4654640840684316914795,
-      "n_crt_str": "4654640840684316914795",
-      "partition": {
-        "A_divides_m": [
-          5,
-          11,
-          17,
-          31,
-          37,
-          41,
-          43,
-          47,
-          53,
-          67
-        ],
-        "B_divides_m_plus_1": [
-          2,
-          3,
-          7,
-          13,
-          19,
-          23,
-          29,
-          59,
-          61,
-          71
-        ]
-      }
-    },
-    {
-      "mask": 921931,
-      "n_crt": 4808517211529174842985,
-      "n_crt_str": "4808517211529174842985",
-      "partition": {
-        "A_divides_m": [
-          5,
-          11,
-          13,
-          19,
-          29,
-          31,
-          37,
-          43,
-          47,
-          53,
-          59
-        ],
-        "B_divides_m_plus_1": [
-          2,
-          3,
-          7,
-          17,
-          23,
-          41,
-          61,
-          67,
-          71
-        ]
-      }
-    },
-    {
-      "mask": 703530,
-      "n_crt": 5368988567590726455740,
-      "n_crt_str": "5368988567590726455740",
-      "partition": {
-        "A_divides_m": [
-          2,
-          5,
-          11,
-          17,
-          19,
-          23,
-          29,
-          47,
-          59,
-          67
-        ],
-        "B_divides_m_plus_1": [
-          3,
-          7,
-          13,
-          31,
-          37,
-          41,
-          43,
-          53,
-          61,
-          71
-        ]
-      }
-    },
-    {
-      "mask": 391211,
-      "n_crt": 6412479106957307486465,
-      "n_crt_str": "6412479106957307486465",
-      "partition": {
-        "A_divides_m": [
-          5,
-          11,
-          17,
-          19,
-          23,
-          29,
-          31,
-          61,
-          71
-        ],
-        "B_divides_m_plus_1": [
-          2,
-          3,
-          7,
-          13,
-          37,
-          41,
-          43,
-          47,
-          53,
-          59,
-          67
-        ]
-      }
-    },
-    {
-      "mask": 681678,
-      "n_crt": 7721059803042384006494,
-      "n_crt_str": "7721059803042384006494",
-      "partition": {
-        "A_divides_m": [
-          2,
-          11,
-          13,
-          23,
-          37,
-          41,
-          53,
-          59,
-          67
-        ],
-        "B_divides_m_plus_1": [
-          3,
-          5,
-          7,
-          17,
-          19,
-          29,
-          31,
-          43,
-          47,
-          61,
-          71
-        ]
-      }
-    },
-    {
-      "mask": 764349,
-      "n_crt": 7839234975118169713089,
-      "n_crt_str": "7839234975118169713089",
-      "partition": {
-        "A_divides_m": [
-          3,
-          17,
-          29,
-          31,
-          41,
-          47,
-          67
-        ],
-        "B_divides_m_plus_1": [
-          2,
-          5,
-          7,
-          11,
-          13,
-          19,
-          23,
-          37,
-          43,
-          53,
-          59,
-          61,
-          71
-        ]
-      }
-    },
-    {
-      "mask": 230502,
-      "n_crt": 8612794368960021957794,
-      "n_crt_str": "8612794368960021957794",
-      "partition": {
-        "A_divides_m": [
-          2,
-          7,
-          11,
-          19,
-          23,
-          29,
-          37,
-          41,
-          43,
-          47,
-          67,
-          71
-        ],
-        "B_divides_m_plus_1": [
-          3,
-          5,
-          13,
-          17,
-          31,
-          53,
-          59,
-          61
-        ]
-      }
-    },
-    {
-      "mask": 12595,
-      "n_crt": 9926847659475869013605,
-      "n_crt_str": "9926847659475869013605",
-      "partition": {
-        "A_divides_m": [
-          5,
-          7,
-          17,
-          19,
-          29,
-          31,
-          37,
-          47,
-          53,
-          59,
-          61,
-          67,
-          71
-        ],
-        "B_divides_m_plus_1": [
-          2,
-          3,
-          11,
-          13,
-          23,
-          41,
-          43
-        ]
-      }
-    }
-  ],
-  "survivors": 13,
+  "survivor_details": [],
+  "survivors": 0,
   "tasks_done": 16,
   "tasks_total": 16,
   "total_steps": 1048576,

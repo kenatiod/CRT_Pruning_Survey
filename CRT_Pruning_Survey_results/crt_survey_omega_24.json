@@ -1,29 +1,29 @@
 {
   "M_digits": 35,
-  "all_partitions_pruned": false,
-  "bound": 10000000000000000000000000000,
-  "bound_str": "10000000000000000000000000000",
+  "all_partitions_pruned": true,
+  "bound": 1000000000000000000000,
+  "bound_str": "1000000000000000000000",
   "cap_statistics": {
     "survivor_cap_hit": false,
     "survivor_count_is_exact": true,
-    "survivor_count_true": 4,
+    "survivor_count_true": 0,
     "survivors_capped_per_task": 1000,
     "survivors_capped_total": 100000
   },
-  "census_prime_count": 35,
-  "census_prime_max": 149,
+  "census_prime_count": 28,
+  "census_prime_max": 107,
   "certificates": {
-    "all_pruned_certificate": false,
-    "all_pruned_statement": null,
+    "all_pruned_certificate": true,
+    "all_pruned_statement": "For every level omega' >= 24: no integer m with 1 <= m <= 10^21.0 satisfies p | m(m+1) for all p <= 89 (hence no prime-complete pair).  Hereditary by refinement of congruence systems.",
     "census_certificate": true,
-    "census_statement": "For every level omega' >= 24: no prime-complete pair (m, m+1) with m <= 10^28.0 exists.  Each surviving class has exactly one member <= B (B < M), every such member was checked for intrinsic prime-completeness, and none passed.  Independent of storage caps; hereditary by refinement.",
+    "census_statement": "For every level omega' >= 24: no prime-complete pair (m, m+1) with m <= 10^21.0 exists.  Each surviving class has exactly one member <= B (B < M), every such member was checked for intrinsic prime-completeness, and none passed.  Independent of storage caps; hereditary by refinement.",
     "heredity_lemma": "Adding the (omega+1)-th prime's congruence refines every class, so class minima are nondecreasing in omega and any certificate at omega_0 holds for all omega >= omega_0 at the same bound."
   },
   "chunk_size": 1,
-  "elapsed_sec": 2.0474038124084473,
+  "elapsed_sec": 2.080993890762329,
   "errors": [],
   "floor_log10": 17.188,
-  "floor_margin_decades": 10.812,
+  "floor_margin_decades": 3.812,
   "floor_margin_nonneg": true,
   "global_min_n_crt": 1560127578864999430859224574,
   "global_min_n_crt_str": "1560127578864999430859224574",
@@ -58,7 +58,7 @@
     ]
   },
   "log10_M": 34.376,
-  "log10_bound": 28.0,
+  "log10_bound": 21.0,
   "log10_global_min": 27.1932,
   "omega": 24,
   "pc_storage_cap_hit": false,
@@ -68,153 +68,12 @@
   "prime_complete_survivors": 0,
   "program": "CRT_Pruning_Survey",
   "run_clean": true,
-  "run_utc": "2026-06-18T01:26:41+00:00",
-  "sha256_log": "b1c48c9880e1a49a347c50ca0afeaeee81326c8754847110343fb3a5f92cf5c3",
+  "run_utc": "2026-06-18T17:37:55+00:00",
+  "sha256_log": "a9c46efda2310488e8f02a5bf88940ca8ccb98038e99a701f9cca9d1e9d2f06f",
   "split_H": 4,
   "split_L": 20,
-  "survivor_details": [
-    {
-      "mask": 2645598,
-      "n_crt": 1560127578864999430859224574,
-      "n_crt_str": "1560127578864999430859224574",
-      "partition": {
-        "A_divides_m": [
-          2,
-          13,
-          19,
-          23,
-          43,
-          53,
-          59,
-          61,
-          67,
-          73,
-          83,
-          89
-        ],
-        "B_divides_m_plus_1": [
-          3,
-          5,
-          7,
-          11,
-          17,
-          29,
-          31,
-          37,
-          41,
-          47,
-          71,
-          79
-        ]
-      }
-    },
-    {
-      "mask": 4715136,
-      "n_crt": 3380997846839529812381235750,
-      "n_crt_str": "3380997846839529812381235750",
-      "partition": {
-        "A_divides_m": [
-          2,
-          3,
-          5,
-          7,
-          11,
-          13,
-          17,
-          23,
-          31,
-          37,
-          71,
-          73,
-          79,
-          89
-        ],
-        "B_divides_m_plus_1": [
-          19,
-          29,
-          41,
-          43,
-          47,
-          53,
-          59,
-          61,
-          67,
-          83
-        ]
-      }
-    },
-    {
-      "mask": 5425238,
-      "n_crt": 7385868709455773778523459814,
-      "n_crt_str": "7385868709455773778523459814",
-      "partition": {
-        "A_divides_m": [
-          2,
-          7,
-          13,
-          19,
-          23,
-          29,
-          31,
-          41,
-          43,
-          59,
-          67,
-          71,
-          79,
-          89
-        ],
-        "B_divides_m_plus_1": [
-          3,
-          5,
-          11,
-          17,
-          37,
-          47,
-          53,
-          61,
-          73,
-          83
-        ]
-      }
-    },
-    {
-      "mask": 9481232,
-      "n_crt": 7556884532585295355390255950,
-      "n_crt_str": "7556884532585295355390255950",
-      "partition": {
-        "A_divides_m": [
-          2,
-          3,
-          5,
-          7,
-          13,
-          17,
-          19,
-          23,
-          29,
-          41,
-          47,
-          59,
-          61,
-          67,
-          71,
-          79,
-          83
-        ],
-        "B_divides_m_plus_1": [
-          11,
-          31,
-          37,
-          43,
-          53,
-          73,
-          89
-        ]
-      }
-    }
-  ],
-  "survivors": 4,
+  "survivor_details": [],
+  "survivors": 0,
   "tasks_done": 16,
   "tasks_total": 16,
   "total_steps": 16777216,

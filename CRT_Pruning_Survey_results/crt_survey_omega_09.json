@@ -20,7 +20,7 @@
     "heredity_lemma": "Adding the (omega+1)-th prime's congruence refines every class, so class minima are nondecreasing in omega and any certificate at omega_0 holds for all omega >= omega_0 at the same bound."
   },
   "chunk_size": 1,
-  "elapsed_sec": 0.02459573745727539,
+  "elapsed_sec": 0.02453923225402832,
   "errors": [],
   "floor_log10": 4.1742,
   "floor_margin_decades": 3.8258,
@@ -53,8 +53,8 @@
   "prime_complete_survivors": 0,
   "program": "CRT_Pruning_Survey",
   "run_clean": true,
-  "run_utc": "2026-06-18T16:40:27+00:00",
-  "sha256_log": "52e46ad4506618631fdba11d1d589291476bfcf7b080faaa11d932b60553c488",
+  "run_utc": "2026-06-18T17:37:51+00:00",
+  "sha256_log": "91cca8dcfd4afa05a3e79f967c8f58de4c0a9d87f91f278224b1c1ed7c323f05",
   "split_H": 4,
   "split_L": 5,
   "survivor_details": [
