@@ -1,0 +1,4068 @@
+{
+  "M_digits": 9,
+  "all_partitions_pruned": false,
+  "bound": 100000000,
+  "bound_str": "100000000",
+  "cap_statistics": {
+    "survivor_cap_hit": false,
+    "survivor_count_is_exact": true,
+    "survivor_count_true": 228,
+    "survivors_capped_per_task": 1000,
+    "survivors_capped_total": 100000
+  },
+  "census_prime_count": 14,
+  "census_prime_max": 43,
+  "certificates": {
+    "all_pruned_certificate": false,
+    "all_pruned_statement": null,
+    "census_certificate": true,
+    "census_statement": "For every level omega' >= 9: no prime-complete pair (m, m+1) with m <= 10^8.0 exists.  Each surviving class has exactly one member <= B (B < M), every such member was checked for intrinsic prime-completeness, and none passed.  Independent of storage caps; hereditary by refinement.",
+    "heredity_lemma": "Adding the (omega+1)-th prime's congruence refines every class, so class minima are nondecreasing in omega and any certificate at omega_0 holds for all omega >= omega_0 at the same bound."
+  },
+  "chunk_size": 1,
+  "elapsed_sec": 0.02459573745727539,
+  "errors": [],
+  "floor_log10": 4.1742,
+  "floor_margin_decades": 3.8258,
+  "floor_margin_nonneg": true,
+  "global_min_n_crt": 367080,
+  "global_min_n_crt_str": "367080",
+  "global_min_partition": {
+    "A_divides_m": [
+      2,
+      3,
+      5,
+      7,
+      19,
+      23
+    ],
+    "B_divides_m_plus_1": [
+      11,
+      13,
+      17
+    ]
+  },
+  "log10_M": 8.3485,
+  "log10_bound": 8.0,
+  "log10_global_min": 5.5648,
+  "omega": 9,
+  "pc_storage_cap_hit": false,
+  "platform": "Linux-6.12.25+rpt-rpi-2712-aarch64-with-glibc2.36",
+  "pmax": 23,
+  "prime_complete_details": [],
+  "prime_complete_survivors": 0,
+  "program": "CRT_Pruning_Survey",
+  "run_clean": true,
+  "run_utc": "2026-06-18T16:40:27+00:00",
+  "sha256_log": "52e46ad4506618631fdba11d1d589291476bfcf7b080faaa11d932b60553c488",
+  "split_H": 4,
+  "split_L": 5,
+  "survivor_details": [
+    {
+      "mask": 112,
+      "n_crt": 367080,
+      "n_crt_str": "367080",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          7,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          11,
+          13,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 212,
+      "n_crt": 728364,
+      "n_crt_str": "728364",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          7,
+          13,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          11,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 338,
+      "n_crt": 864500,
+      "n_crt_str": "864500",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          7,
+          13,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          11,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 473,
+      "n_crt": 1144065,
+      "n_crt_str": "1144065",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          13
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          7,
+          11,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 238,
+      "n_crt": 1322684,
+      "n_crt_str": "1322684",
+      "partition": {
+        "A_divides_m": [
+          2,
+          11,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          7,
+          13,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 325,
+      "n_crt": 1540539,
+      "n_crt_str": "1540539",
+      "partition": {
+        "A_divides_m": [
+          3,
+          7,
+          11,
+          13,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 67,
+      "n_crt": 2187185,
+      "n_crt_str": "2187185",
+      "partition": {
+        "A_divides_m": [
+          5,
+          7,
+          11,
+          13,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 200,
+      "n_crt": 2466750,
+      "n_crt_str": "2466750",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          11,
+          13,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          7,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 52,
+      "n_crt": 5616324,
+      "n_crt_str": "5616324",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          7,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          11,
+          13
+        ]
+      }
+    },
+    {
+      "mask": 313,
+      "n_crt": 6032025,
+      "n_crt_str": "6032025",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          7,
+          11,
+          13,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 278,
+      "n_crt": 6113744,
+      "n_crt_str": "6113744",
+      "partition": {
+        "A_divides_m": [
+          2,
+          7,
+          13,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          11,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 413,
+      "n_crt": 6393309,
+      "n_crt_str": "6393309",
+      "partition": {
+        "A_divides_m": [
+          3,
+          13,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          7,
+          11,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 155,
+      "n_crt": 7039955,
+      "n_crt_str": "7039955",
+      "partition": {
+        "A_divides_m": [
+          5,
+          13,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          7,
+          11,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 480,
+      "n_crt": 7050120,
+      "n_crt_str": "7050120",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "B_divides_m_plus_1": [
+          13,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 40,
+      "n_crt": 7354710,
+      "n_crt_str": "7354710",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          11,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          7,
+          13
+        ]
+      }
+    },
+    {
+      "mask": 7,
+      "n_crt": 7436429,
+      "n_crt_str": "7436429",
+      "partition": {
+        "A_divides_m": [
+          7,
+          11,
+          13,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "mask": 140,
+      "n_crt": 7715994,
+      "n_crt_str": "7715994",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          11,
+          13,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          7,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 119,
+      "n_crt": 7803509,
+      "n_crt_str": "7803509",
+      "partition": {
+        "A_divides_m": [
+          7,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          11,
+          13,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 266,
+      "n_crt": 7852130,
+      "n_crt_str": "7852130",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          11,
+          13,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          7,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 252,
+      "n_crt": 8083074,
+      "n_crt_str": "8083074",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          7,
+          11,
+          13,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 378,
+      "n_crt": 8219210,
+      "n_crt_str": "8219210",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          7,
+          11,
+          13,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 478,
+      "n_crt": 8580494,
+      "n_crt_str": "8580494",
+      "partition": {
+        "A_divides_m": [
+          2,
+          13
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          7,
+          11,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 365,
+      "n_crt": 8895249,
+      "n_crt_str": "8895249",
+      "partition": {
+        "A_divides_m": [
+          3,
+          11,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          7,
+          13,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 81,
+      "n_crt": 8947575,
+      "n_crt_str": "8947575",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          7,
+          13,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          11,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 107,
+      "n_crt": 9541895,
+      "n_crt_str": "9541895",
+      "partition": {
+        "A_divides_m": [
+          5,
+          11,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          7,
+          13,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 207,
+      "n_crt": 9903179,
+      "n_crt_str": "9903179",
+      "partition": {
+        "A_divides_m": [
+          11,
+          13,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          7,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 435,
+      "n_crt": 11623325,
+      "n_crt_str": "11623325",
+      "partition": {
+        "A_divides_m": [
+          5,
+          7,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          11,
+          13,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 420,
+      "n_crt": 12299364,
+      "n_crt_str": "12299364",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          7,
+          11,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          13,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 162,
+      "n_crt": 12946010,
+      "n_crt_str": "12946010",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          7,
+          11,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          13,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 318,
+      "n_crt": 13468454,
+      "n_crt_str": "13468454",
+      "partition": {
+        "A_divides_m": [
+          2,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          7,
+          11,
+          13,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 21,
+      "n_crt": 14196819,
+      "n_crt_str": "14196819",
+      "partition": {
+        "A_divides_m": [
+          3,
+          7,
+          13,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          11
+        ]
+      }
+    },
+    {
+      "mask": 487,
+      "n_crt": 14486549,
+      "n_crt_str": "14486549",
+      "partition": {
+        "A_divides_m": [
+          7,
+          11
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          13,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 280,
+      "n_crt": 14612520,
+      "n_crt_str": "14612520",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          13,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          7,
+          11,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 47,
+      "n_crt": 14791139,
+      "n_crt_str": "14791139",
+      "partition": {
+        "A_divides_m": [
+          11,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          7,
+          13
+        ]
+      }
+    },
+    {
+      "mask": 449,
+      "n_crt": 15630615,
+      "n_crt_str": "15630615",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 9,
+      "n_crt": 15935205,
+      "n_crt_str": "15935205",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          11,
+          13,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          7
+        ]
+      }
+    },
+    {
+      "mask": 121,
+      "n_crt": 16302285,
+      "n_crt_str": "16302285",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          7,
+          11,
+          13,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 86,
+      "n_crt": 16384004,
+      "n_crt_str": "16384004",
+      "partition": {
+        "A_divides_m": [
+          2,
+          7,
+          13,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          11,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 221,
+      "n_crt": 16663569,
+      "n_crt_str": "16663569",
+      "partition": {
+        "A_divides_m": [
+          3,
+          13,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          7,
+          11,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 347,
+      "n_crt": 16799705,
+      "n_crt_str": "16799705",
+      "partition": {
+        "A_divides_m": [
+          5,
+          13,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          7,
+          11,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 332,
+      "n_crt": 17475744,
+      "n_crt_str": "17475744",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          11,
+          13,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          7,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 74,
+      "n_crt": 18122390,
+      "n_crt_str": "18122390",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          11,
+          13,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          7,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 176,
+      "n_crt": 19706400,
+      "n_crt_str": "19706400",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          7,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          11,
+          13,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 402,
+      "n_crt": 20203820,
+      "n_crt_str": "20203820",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          7,
+          13,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          11,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 289,
+      "n_crt": 20518575,
+      "n_crt_str": "20518575",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          7,
+          11,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          13,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 389,
+      "n_crt": 20879859,
+      "n_crt_str": "20879859",
+      "partition": {
+        "A_divides_m": [
+          3,
+          7,
+          11,
+          13,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 501,
+      "n_crt": 21246939,
+      "n_crt_str": "21246939",
+      "partition": {
+        "A_divides_m": [
+          3,
+          7
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          11,
+          13,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 131,
+      "n_crt": 21526505,
+      "n_crt_str": "21526505",
+      "partition": {
+        "A_divides_m": [
+          5,
+          7,
+          11,
+          13,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 61,
+      "n_crt": 21551529,
+      "n_crt_str": "21551529",
+      "partition": {
+        "A_divides_m": [
+          3,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          7,
+          11,
+          13
+        ]
+      }
+    },
+    {
+      "mask": 243,
+      "n_crt": 21893585,
+      "n_crt_str": "21893585",
+      "partition": {
+        "A_divides_m": [
+          5,
+          7,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          11,
+          13,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 287,
+      "n_crt": 22048949,
+      "n_crt_str": "22048949",
+      "partition": {
+        "A_divides_m": [
+          13,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 228,
+      "n_crt": 22569624,
+      "n_crt_str": "22569624",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          7,
+          11,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          13,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 354,
+      "n_crt": 22705760,
+      "n_crt_str": "22705760",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          7,
+          11,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          13,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 489,
+      "n_crt": 22985325,
+      "n_crt_str": "22985325",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          11
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          7,
+          13,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 454,
+      "n_crt": 23067044,
+      "n_crt_str": "23067044",
+      "partition": {
+        "A_divides_m": [
+          2,
+          7,
+          11,
+          13
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 14,
+      "n_crt": 23371634,
+      "n_crt_str": "23371634",
+      "partition": {
+        "A_divides_m": [
+          2,
+          11,
+          13,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          7
+        ]
+      }
+    },
+    {
+      "mask": 126,
+      "n_crt": 23738714,
+      "n_crt_str": "23738714",
+      "partition": {
+        "A_divides_m": [
+          2,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          7,
+          11,
+          13,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 88,
+      "n_crt": 24882780,
+      "n_crt_str": "24882780",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          13,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          7,
+          11,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 183,
+      "n_crt": 27142829,
+      "n_crt_str": "27142829",
+      "partition": {
+        "A_divides_m": [
+          7,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          11,
+          13,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 442,
+      "n_crt": 27558530,
+      "n_crt_str": "27558530",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          7,
+          11,
+          13,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 294,
+      "n_crt": 27955004,
+      "n_crt_str": "27955004",
+      "partition": {
+        "A_divides_m": [
+          2,
+          7,
+          11,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          13,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 429,
+      "n_crt": 28234569,
+      "n_crt_str": "28234569",
+      "partition": {
+        "A_divides_m": [
+          3,
+          11,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          7,
+          13,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 145,
+      "n_crt": 28286895,
+      "n_crt_str": "28286895",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          7,
+          13,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          11,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 171,
+      "n_crt": 28881215,
+      "n_crt_str": "28881215",
+      "partition": {
+        "A_divides_m": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          7,
+          13,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 256,
+      "n_crt": 29099070,
+      "n_crt_str": "29099070",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          23
+        ]
+      }
+    },
+    {
+      "mask": 368,
+      "n_crt": 29466150,
+      "n_crt_str": "29466150",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          7,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          11,
+          13,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 468,
+      "n_crt": 29827434,
+      "n_crt_str": "29827434",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          7,
+          13
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          11,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 28,
+      "n_crt": 30132024,
+      "n_crt_str": "30132024",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          13,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          7,
+          11
+        ]
+      }
+    },
+    {
+      "mask": 494,
+      "n_crt": 30421754,
+      "n_crt_str": "30421754",
+      "partition": {
+        "A_divides_m": [
+          2,
+          11
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          7,
+          13,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 210,
+      "n_crt": 30474080,
+      "n_crt_str": "30474080",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          7,
+          13,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          11,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 97,
+      "n_crt": 30788835,
+      "n_crt_str": "30788835",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          7,
+          11,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          13,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 197,
+      "n_crt": 31150119,
+      "n_crt_str": "31150119",
+      "partition": {
+        "A_divides_m": [
+          3,
+          7,
+          11,
+          13,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 323,
+      "n_crt": 31286255,
+      "n_crt_str": "31286255",
+      "partition": {
+        "A_divides_m": [
+          5,
+          7,
+          11,
+          13,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 456,
+      "n_crt": 31565820,
+      "n_crt_str": "31565820",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          11,
+          13
+        ],
+        "B_divides_m_plus_1": [
+          7,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 95,
+      "n_crt": 32319209,
+      "n_crt_str": "32319209",
+      "partition": {
+        "A_divides_m": [
+          13,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 308,
+      "n_crt": 34715394,
+      "n_crt_str": "34715394",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          7,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          11,
+          13,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 50,
+      "n_crt": 35362040,
+      "n_crt_str": "35362040",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          7,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          11,
+          13
+        ]
+      }
+    },
+    {
+      "mask": 185,
+      "n_crt": 35641605,
+      "n_crt_str": "35641605",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          7,
+          11,
+          13,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 150,
+      "n_crt": 35723324,
+      "n_crt_str": "35723324",
+      "partition": {
+        "A_divides_m": [
+          2,
+          7,
+          13,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          11,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 37,
+      "n_crt": 36038079,
+      "n_crt_str": "36038079",
+      "partition": {
+        "A_divides_m": [
+          3,
+          7,
+          11,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          13
+        ]
+      }
+    },
+    {
+      "mask": 411,
+      "n_crt": 36139025,
+      "n_crt_str": "36139025",
+      "partition": {
+        "A_divides_m": [
+          5,
+          13,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          7,
+          11,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 296,
+      "n_crt": 36453780,
+      "n_crt_str": "36453780",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          11,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          7,
+          13,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 263,
+      "n_crt": 36535499,
+      "n_crt_str": "36535499",
+      "partition": {
+        "A_divides_m": [
+          7,
+          11,
+          13,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 396,
+      "n_crt": 36815064,
+      "n_crt_str": "36815064",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          11,
+          13,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          7,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 375,
+      "n_crt": 36902579,
+      "n_crt_str": "36902579",
+      "partition": {
+        "A_divides_m": [
+          7,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          11,
+          13,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 508,
+      "n_crt": 37182144,
+      "n_crt_str": "37182144",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 138,
+      "n_crt": 37461710,
+      "n_crt_str": "37461710",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          11,
+          13,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          7,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 250,
+      "n_crt": 37828790,
+      "n_crt_str": "37828790",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          7,
+          11,
+          13,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 337,
+      "n_crt": 38046645,
+      "n_crt_str": "38046645",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          7,
+          13,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          11,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 102,
+      "n_crt": 38225264,
+      "n_crt_str": "38225264",
+      "partition": {
+        "A_divides_m": [
+          2,
+          7,
+          11,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          13,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 237,
+      "n_crt": 38504829,
+      "n_crt_str": "38504829",
+      "partition": {
+        "A_divides_m": [
+          3,
+          11,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          7,
+          13,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 363,
+      "n_crt": 38640965,
+      "n_crt_str": "38640965",
+      "partition": {
+        "A_divides_m": [
+          5,
+          11,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          7,
+          13,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 463,
+      "n_crt": 39002249,
+      "n_crt_str": "39002249",
+      "partition": {
+        "A_divides_m": [
+          11,
+          13
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          7,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 64,
+      "n_crt": 39369330,
+      "n_crt_str": "39369330",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          17
+        ]
+      }
+    },
+    {
+      "mask": 418,
+      "n_crt": 42045080,
+      "n_crt_str": "42045080",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          7,
+          11,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          13,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 190,
+      "n_crt": 43078034,
+      "n_crt_str": "43078034",
+      "partition": {
+        "A_divides_m": [
+          2,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          7,
+          11,
+          13,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 277,
+      "n_crt": 43295889,
+      "n_crt_str": "43295889",
+      "partition": {
+        "A_divides_m": [
+          3,
+          7,
+          13,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          11,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 303,
+      "n_crt": 43890209,
+      "n_crt_str": "43890209",
+      "partition": {
+        "A_divides_m": [
+          11,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          7,
+          13,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 19,
+      "n_crt": 43942535,
+      "n_crt_str": "43942535",
+      "partition": {
+        "A_divides_m": [
+          5,
+          7,
+          13,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          11
+        ]
+      }
+    },
+    {
+      "mask": 152,
+      "n_crt": 44222100,
+      "n_crt_str": "44222100",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          13,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          7,
+          11,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 4,
+      "n_crt": 44618574,
+      "n_crt_str": "44618574",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          5
+        ]
+      }
+    },
+    {
+      "mask": 116,
+      "n_crt": 44985654,
+      "n_crt_str": "44985654",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          7,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          11,
+          13,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 265,
+      "n_crt": 45034275,
+      "n_crt_str": "45034275",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          11,
+          13,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          7,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 377,
+      "n_crt": 45401355,
+      "n_crt_str": "45401355",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          7,
+          11,
+          13,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 342,
+      "n_crt": 45483074,
+      "n_crt_str": "45483074",
+      "partition": {
+        "A_divides_m": [
+          2,
+          7,
+          13,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          11,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 477,
+      "n_crt": 45762639,
+      "n_crt_str": "45762639",
+      "partition": {
+        "A_divides_m": [
+          3,
+          13
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          7,
+          11,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 219,
+      "n_crt": 46409285,
+      "n_crt_str": "46409285",
+      "partition": {
+        "A_divides_m": [
+          5,
+          13,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          7,
+          11,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 104,
+      "n_crt": 46724040,
+      "n_crt_str": "46724040",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          11,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          7,
+          13,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 71,
+      "n_crt": 46805759,
+      "n_crt_str": "46805759",
+      "partition": {
+        "A_divides_m": [
+          7,
+          11,
+          13,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 204,
+      "n_crt": 47085324,
+      "n_crt_str": "47085324",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          11,
+          13,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          7,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 330,
+      "n_crt": 47221460,
+      "n_crt_str": "47221460",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          11,
+          13,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          7,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 432,
+      "n_crt": 48805470,
+      "n_crt_str": "48805470",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          7,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          11,
+          13,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 161,
+      "n_crt": 50128155,
+      "n_crt_str": "50128155",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          7,
+          11,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          13,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 387,
+      "n_crt": 50625575,
+      "n_crt_str": "50625575",
+      "partition": {
+        "A_divides_m": [
+          5,
+          7,
+          11,
+          13,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 317,
+      "n_crt": 50650599,
+      "n_crt_str": "50650599",
+      "partition": {
+        "A_divides_m": [
+          3,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          7,
+          11,
+          13,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 499,
+      "n_crt": 50992655,
+      "n_crt_str": "50992655",
+      "partition": {
+        "A_divides_m": [
+          5,
+          7
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          11,
+          13,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 59,
+      "n_crt": 51297245,
+      "n_crt_str": "51297245",
+      "partition": {
+        "A_divides_m": [
+          5,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          7,
+          11,
+          13
+        ]
+      }
+    },
+    {
+      "mask": 159,
+      "n_crt": 51658529,
+      "n_crt_str": "51658529",
+      "partition": {
+        "A_divides_m": [
+          13,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 484,
+      "n_crt": 51668694,
+      "n_crt_str": "51668694",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          7,
+          11
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          13,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 44,
+      "n_crt": 51973284,
+      "n_crt_str": "51973284",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          11,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          7,
+          13
+        ]
+      }
+    },
+    {
+      "mask": 226,
+      "n_crt": 52315340,
+      "n_crt_str": "52315340",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          7,
+          11,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          13,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 270,
+      "n_crt": 52470704,
+      "n_crt_str": "52470704",
+      "partition": {
+        "A_divides_m": [
+          2,
+          11,
+          13,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          7,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 382,
+      "n_crt": 52837784,
+      "n_crt_str": "52837784",
+      "partition": {
+        "A_divides_m": [
+          2,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 85,
+      "n_crt": 53566149,
+      "n_crt_str": "53566149",
+      "partition": {
+        "A_divides_m": [
+          3,
+          7,
+          13,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          11,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 344,
+      "n_crt": 53981850,
+      "n_crt_str": "53981850",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          13,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          7,
+          11,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 111,
+      "n_crt": 54160469,
+      "n_crt_str": "54160469",
+      "partition": {
+        "A_divides_m": [
+          11,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          7,
+          13,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 73,
+      "n_crt": 55304535,
+      "n_crt_str": "55304535",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          11,
+          13,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          7,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 439,
+      "n_crt": 56241899,
+      "n_crt_str": "56241899",
+      "partition": {
+        "A_divides_m": [
+          7,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          11,
+          13,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 401,
+      "n_crt": 57385965,
+      "n_crt_str": "57385965",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          7,
+          13,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          11,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 166,
+      "n_crt": 57564584,
+      "n_crt_str": "57564584",
+      "partition": {
+        "A_divides_m": [
+          2,
+          7,
+          11,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          13,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 427,
+      "n_crt": 57980285,
+      "n_crt_str": "57980285",
+      "partition": {
+        "A_divides_m": [
+          5,
+          11,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          7,
+          13,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 128,
+      "n_crt": 58708650,
+      "n_crt_str": "58708650",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          19
+        ]
+      }
+    },
+    {
+      "mask": 240,
+      "n_crt": 59075730,
+      "n_crt_str": "59075730",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          7,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          11,
+          13,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 284,
+      "n_crt": 59231094,
+      "n_crt_str": "59231094",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          13,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          7,
+          11,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 466,
+      "n_crt": 59573150,
+      "n_crt_str": "59573150",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          7,
+          13
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          11,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 26,
+      "n_crt": 59877740,
+      "n_crt_str": "59877740",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          13,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          7,
+          11
+        ]
+      }
+    },
+    {
+      "mask": 353,
+      "n_crt": 59887905,
+      "n_crt_str": "59887905",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          7,
+          11,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          13,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 453,
+      "n_crt": 60249189,
+      "n_crt_str": "60249189",
+      "partition": {
+        "A_divides_m": [
+          3,
+          7,
+          11,
+          13
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 13,
+      "n_crt": 60553779,
+      "n_crt_str": "60553779",
+      "partition": {
+        "A_divides_m": [
+          3,
+          11,
+          13,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          7
+        ]
+      }
+    },
+    {
+      "mask": 195,
+      "n_crt": 60895835,
+      "n_crt_str": "60895835",
+      "partition": {
+        "A_divides_m": [
+          5,
+          7,
+          11,
+          13,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 125,
+      "n_crt": 60920859,
+      "n_crt_str": "60920859",
+      "partition": {
+        "A_divides_m": [
+          3,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          7,
+          11,
+          13,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 351,
+      "n_crt": 61418279,
+      "n_crt_str": "61418279",
+      "partition": {
+        "A_divides_m": [
+          13,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 78,
+      "n_crt": 62740964,
+      "n_crt_str": "62740964",
+      "partition": {
+        "A_divides_m": [
+          2,
+          11,
+          13,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          7,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 180,
+      "n_crt": 64324974,
+      "n_crt_str": "64324974",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          7,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          11,
+          13,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 306,
+      "n_crt": 64461110,
+      "n_crt_str": "64461110",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          7,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          11,
+          13,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 441,
+      "n_crt": 64740675,
+      "n_crt_str": "64740675",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          7,
+          11,
+          13,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 406,
+      "n_crt": 64822394,
+      "n_crt_str": "64822394",
+      "partition": {
+        "A_divides_m": [
+          2,
+          7,
+          13,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          11,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 293,
+      "n_crt": 65137149,
+      "n_crt_str": "65137149",
+      "partition": {
+        "A_divides_m": [
+          3,
+          7,
+          11,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          13,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 35,
+      "n_crt": 65783795,
+      "n_crt_str": "65783795",
+      "partition": {
+        "A_divides_m": [
+          5,
+          7,
+          11,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          13
+        ]
+      }
+    },
+    {
+      "mask": 168,
+      "n_crt": 66063360,
+      "n_crt_str": "66063360",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          11,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          7,
+          13,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 135,
+      "n_crt": 66145079,
+      "n_crt_str": "66145079",
+      "partition": {
+        "A_divides_m": [
+          7,
+          11,
+          13,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 247,
+      "n_crt": 66512159,
+      "n_crt_str": "66512159",
+      "partition": {
+        "A_divides_m": [
+          7,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          11,
+          13,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 394,
+      "n_crt": 66560780,
+      "n_crt_str": "66560780",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          11,
+          13,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          7,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 506,
+      "n_crt": 66927860,
+      "n_crt_str": "66927860",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 358,
+      "n_crt": 67324334,
+      "n_crt_str": "67324334",
+      "partition": {
+        "A_divides_m": [
+          2,
+          7,
+          11,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          13,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 493,
+      "n_crt": 67603899,
+      "n_crt_str": "67603899",
+      "partition": {
+        "A_divides_m": [
+          3,
+          11
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          7,
+          13,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 209,
+      "n_crt": 67656225,
+      "n_crt_str": "67656225",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          7,
+          13,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          11,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 235,
+      "n_crt": 68250545,
+      "n_crt_str": "68250545",
+      "partition": {
+        "A_divides_m": [
+          5,
+          11,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          7,
+          13,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 320,
+      "n_crt": 68468400,
+      "n_crt_str": "68468400",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 92,
+      "n_crt": 69501354,
+      "n_crt_str": "69501354",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          13,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          7,
+          11,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 446,
+      "n_crt": 72177104,
+      "n_crt_str": "72177104",
+      "partition": {
+        "A_divides_m": [
+          2,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          7,
+          11,
+          13,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 49,
+      "n_crt": 72544185,
+      "n_crt_str": "72544185",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          7,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          11,
+          13
+        ]
+      }
+    },
+    {
+      "mask": 149,
+      "n_crt": 72905469,
+      "n_crt_str": "72905469",
+      "partition": {
+        "A_divides_m": [
+          3,
+          7,
+          13,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          11,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 275,
+      "n_crt": 73041605,
+      "n_crt_str": "73041605",
+      "partition": {
+        "A_divides_m": [
+          5,
+          7,
+          13,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          11,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 408,
+      "n_crt": 73321170,
+      "n_crt_str": "73321170",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          13,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          7,
+          11,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 175,
+      "n_crt": 73499789,
+      "n_crt_str": "73499789",
+      "partition": {
+        "A_divides_m": [
+          11,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          7,
+          13,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 260,
+      "n_crt": 73717644,
+      "n_crt_str": "73717644",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          7,
+          11,
+          13,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 372,
+      "n_crt": 74084724,
+      "n_crt_str": "74084724",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          7,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          11,
+          13,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 2,
+      "n_crt": 74364290,
+      "n_crt_str": "74364290",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3
+        ]
+      }
+    },
+    {
+      "mask": 137,
+      "n_crt": 74643855,
+      "n_crt_str": "74643855",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          11,
+          13,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          7,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 114,
+      "n_crt": 74731370,
+      "n_crt_str": "74731370",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          7,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          11,
+          13,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 249,
+      "n_crt": 75010935,
+      "n_crt_str": "75010935",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          7,
+          11,
+          13,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 214,
+      "n_crt": 75092654,
+      "n_crt_str": "75092654",
+      "partition": {
+        "A_divides_m": [
+          2,
+          7,
+          13,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          11,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 101,
+      "n_crt": 75407409,
+      "n_crt_str": "75407409",
+      "partition": {
+        "A_divides_m": [
+          3,
+          7,
+          11,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          13,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 475,
+      "n_crt": 75508355,
+      "n_crt_str": "75508355",
+      "partition": {
+        "A_divides_m": [
+          5,
+          13
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          7,
+          11,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 360,
+      "n_crt": 75823110,
+      "n_crt_str": "75823110",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          11,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          7,
+          13,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 327,
+      "n_crt": 75904829,
+      "n_crt_str": "75904829",
+      "partition": {
+        "A_divides_m": [
+          7,
+          11,
+          13,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 460,
+      "n_crt": 76184394,
+      "n_crt_str": "76184394",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          11,
+          13
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          7,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 202,
+      "n_crt": 76831040,
+      "n_crt_str": "76831040",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          11,
+          13,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          7,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 417,
+      "n_crt": 79227225,
+      "n_crt_str": "79227225",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          7,
+          11,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          13,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 54,
+      "n_crt": 79980614,
+      "n_crt_str": "79980614",
+      "partition": {
+        "A_divides_m": [
+          2,
+          7,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          11,
+          13
+        ]
+      }
+    },
+    {
+      "mask": 189,
+      "n_crt": 80260179,
+      "n_crt_str": "80260179",
+      "partition": {
+        "A_divides_m": [
+          3,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          7,
+          11,
+          13,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 315,
+      "n_crt": 80396315,
+      "n_crt_str": "80396315",
+      "partition": {
+        "A_divides_m": [
+          5,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          7,
+          11,
+          13,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 415,
+      "n_crt": 80757599,
+      "n_crt_str": "80757599",
+      "partition": {
+        "A_divides_m": [
+          13,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 300,
+      "n_crt": 81072354,
+      "n_crt_str": "81072354",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          11,
+          17,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          7,
+          13,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 16,
+      "n_crt": 81124680,
+      "n_crt_str": "81124680",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          7,
+          13,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          11
+        ]
+      }
+    },
+    {
+      "mask": 482,
+      "n_crt": 81414410,
+      "n_crt_str": "81414410",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          13,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 42,
+      "n_crt": 81719000,
+      "n_crt_str": "81719000",
+      "partition": {
+        "A_divides_m": [
+          2,
+          5,
+          11,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          7,
+          13
+        ]
+      }
+    },
+    {
+      "mask": 142,
+      "n_crt": 82080284,
+      "n_crt_str": "82080284",
+      "partition": {
+        "A_divides_m": [
+          2,
+          11,
+          13,
+          17,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          7,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 254,
+      "n_crt": 82447364,
+      "n_crt_str": "82447364",
+      "partition": {
+        "A_divides_m": [
+          2,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 341,
+      "n_crt": 82665219,
+      "n_crt_str": "82665219",
+      "partition": {
+        "A_divides_m": [
+          3,
+          7,
+          13,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          5,
+          11,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 367,
+      "n_crt": 83259539,
+      "n_crt_str": "83259539",
+      "partition": {
+        "A_divides_m": [
+          11,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          5,
+          7,
+          13,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 83,
+      "n_crt": 83311865,
+      "n_crt_str": "83311865",
+      "partition": {
+        "A_divides_m": [
+          5,
+          7,
+          13,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          3,
+          11,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 216,
+      "n_crt": 83591430,
+      "n_crt_str": "83591430",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          13,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          7,
+          11,
+          17,
+          19
+        ]
+      }
+    },
+    {
+      "mask": 68,
+      "n_crt": 83987904,
+      "n_crt_str": "83987904",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          7,
+          11,
+          13,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          5,
+          17
+        ]
+      }
+    },
+    {
+      "mask": 329,
+      "n_crt": 84403605,
+      "n_crt_str": "84403605",
+      "partition": {
+        "A_divides_m": [
+          3,
+          5,
+          11,
+          13,
+          19
+        ],
+        "B_divides_m_plus_1": [
+          2,
+          7,
+          17,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 422,
+      "n_crt": 86663654,
+      "n_crt_str": "86663654",
+      "partition": {
+        "A_divides_m": [
+          2,
+          7,
+          11,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          3,
+          5,
+          13,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 384,
+      "n_crt": 87807720,
+      "n_crt_str": "87807720",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17
+        ],
+        "B_divides_m_plus_1": [
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 496,
+      "n_crt": 88174800,
+      "n_crt_str": "88174800",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "B_divides_m_plus_1": [
+          11,
+          13,
+          17,
+          19,
+          23
+        ]
+      }
+    },
+    {
+      "mask": 56,
+      "n_crt": 88479390,
+      "n_crt_str": "88479390",
+      "partition": {
+        "A_divides_m": [
+          2,
+          3,
+          5,
+          17,
+          19,
+          23
+        ],
+        "B_divides_m_plus_1": [
+          7,
+          11,
+          13
+        ]
+      }
+    }
+  ],
+  "survivors": 228,
+  "tasks_done": 16,
+  "tasks_total": 16,
+  "total_steps": 512,
+  "valid_partitions": 510,
+  "version": 4
+}
