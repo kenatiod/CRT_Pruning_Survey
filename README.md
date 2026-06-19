@@ -101,7 +101,7 @@ certificate otherwise:
    and a fixed bound eventually drops below it, certifying only a range in which
    the floor identity already guarantees no pair can lie. v4 measures and records
    the **margin above the floor**, $log₁₀(B) − ½·log₁₀(M_ω)$, and can hold it
-   uniform across a whole run (see $--floor_margin$). A certificate is
+   uniform across a whole run (see --floor_margin). A certificate is
    proof-relevant only when this margin is $≥ 0$, and carries the intended safety
    factor when it is comfortably positive.
 
