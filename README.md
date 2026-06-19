@@ -142,13 +142,12 @@ ways to set it.
 
 Hold a fixed safety margin (in decades) above the floor $√M_ω$ at every level:
 
-bash
 python3 CRT_Pruning_Survey.py --start_omega 34 --end_omega 70 \
     --floor_margin 6 --min_floor_margin 6 --workers 10
 
 
-This sets $log₁₀(B) = ⌈½·log₁₀(M_ω) + 6⌉$ per level, so every certificate in the
-run is six decades clear of the floor. $--min_floor_margin$ stops the run cleanly
+This sets $log_{10}(B) = ½·log_{10}(M_ω) + 6$ per level, so every certificate in the
+run is six decades clear of the floor. --min_floor_margin stops the run cleanly
 the moment that margin cannot be held.
 
 Add $--dry_run$ to print the pre-flight table — floor, bound, $B < M$, and the
@@ -160,13 +159,12 @@ running first before a long job.
 A single exponent $B = 10^E$ for all levels (suitable for one ω, or when you want
 an identical bound across a short range):
 
-bash
 python3 CRT_Pruning_Survey.py --omega_list 28,29,30,31,32 \
     --bound_expo 31 --workers 10
 
 
 Note that with a fixed $E$ the floor margin shrinks as ω grows and can go
-negative; the pre-flight table shows this, and $--min_floor_margin$ can guard
+negative; the pre-flight table shows this, and --min_floor_margin can guard
 against it.
 
 ### Minimum-only mode
