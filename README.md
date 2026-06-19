@@ -23,9 +23,9 @@ Fix ω and let $P_ω = {2, 3, 5, …, p_ω}$ be the first ω primes, with primor
 $M_ω = 2·3·5···p_ω$. A pair of consecutive integers $m, m+1$ is **prime-complete
 at level ω** when every census prime divides the product and no larger prime does:
 
-$$$
+$$
 rad( m(m+1) ) = P_ω.
-$$$
+$$
 
 Such pairs are rare and they stop: the last one is $m = 633555$ (at ω = 8). The
 question is whether any exist at higher ω. Because $m$ and $m+1$ are coprime, a
@@ -53,9 +53,9 @@ positive representatives are $M_ω$ and $M_ω − 1$, both $> B$ whenever $B < M
 A prime-complete pair of order ω factors as $m(m+1) = M_ω · jk$ with $j, k ≥ 1$,
 so $m(m+1) ≥ M_ω$ and therefore
 
-$$$
+$$
 m ≥ √M_ω − 1.       (the "floor")
-$$$
+$$
 
 This is an exact, unconditional lower bound on where a prime-complete pair could
 *first* appear at level ω. It is the reason a bounded survey can certify an
@@ -141,10 +141,10 @@ ways to set it.
 
 Hold a fixed safety margin (in decades) above the floor $√M_ω$ at every level:
 
-$$$bash
+bash
 python3 CRT_Pruning_Survey.py --start_omega 34 --end_omega 70 \
     --floor_margin 6 --min_floor_margin 6 --workers 10
-$$$
+
 
 This sets $log₁₀(B) = ⌈½·log₁₀(M_ω) + 6⌉$ per level, so every certificate in the
 run is six decades clear of the floor. $--min_floor_margin$ stops the run cleanly
@@ -159,10 +159,10 @@ running first before a long job.
 A single exponent $B = 10^E$ for all levels (suitable for one ω, or when you want
 an identical bound across a short range):
 
-$$$bash
+bash
 python3 CRT_Pruning_Survey.py --omega_list 28,29,30,31,32 \
     --bound_expo 31 --workers 10
-$$$
+
 
 Note that with a fixed $E$ the floor margin shrinks as ω grows and can go
 negative; the pre-flight table shows this, and $--min_floor_margin$ can guard
@@ -172,36 +172,36 @@ against it.
 
 Find the absolute minimum CRT representative at each level (no pruning):
 
-$$$bash
+bash
 python3 CRT_Pruning_Survey.py --start_omega 30 --end_omega 35 --bound_expo 0
-$$$
+
 
 ### Key options
 
 | Option | Meaning |
 |---|---|
-| $--start_omega$, $--end_omega$ | Inclusive census-level range. |
-| $--omega_list a,b,c$ | Explicit levels (overrides start/end). |
-| $--floor_margin D$ | Per-ω bound held $D$ decades above the floor $√M_ω$. Overrides $--bound_expo$. |
-| $--min_floor_margin D$ | Abort/stop any level whose floor margin would fall below $D$. |
-| $--bound_expo E$ | Fixed $B = 10^E$ for all levels. $0$ = minimum-only. Requires $10^E < M_ω$. |
-| $--dry_run$ | Print the pre-flight table and exit. |
-| $--workers N$ | Worker processes (default: all cores). |
-| $--task_log2 K$ | Target $log₂(steps)$ per task (load balancing; default 22). |
-| $--survivor_cap_per_task$, $--survivor_cap_total$ | Caps on *stored* survivors only; counting and checking are never capped. |
-| $--skip_done$ | Skip levels whose result file already exists. |
-| $--outdir DIR$ | Output directory (default $CRT_Pruning_Survey_results$). |
+| --start_omega, --end_omega | Inclusive census-level range. |
+| --omega_list a,b,c | Explicit levels (overrides start/end). |
+| --floor_margin D | Per-ω bound held $D$ decades above the floor $√M_ω$. Overrides --bound_expo. |
+| --min_floor_margin D | Abort/stop any level whose floor margin would fall below $D$. |
+| --bound_expo E | Fixed $B = 10^E$ for all levels. $0$ = minimum-only. Requires $10^E < M_ω$. |
+| --dry_run | Print the pre-flight table and exit. |
+| --workers N | Worker processes (default: all cores). |
+| --task_log2 K | Target $log₂(steps)$ per task (load balancing; default 22). |
+| --survivor_cap_per_task, --survivor_cap_total | Caps on *stored* survivors only; counting and checking are never capped. |
+| --skip_done | Skip levels whose result file already exists. |
+| --outdir DIR | Output directory (default CRT_Pruning_Survey_results). |
 
 ---
 
 ## Output
 
-Each level writes $crt_survey_omega_NN.json$ and $crt_survey_omega_NN.log$ to the
+Each level writes crt_survey_omega_NN.json and crt_survey_omega_NN.log to the
 output directory. The JSON records:
 
 - the verdict flags $all_pruned_certificate$ and $census_certificate$, each with
   its full statement string;
-- $floor_log10$, $floor_margin_decades$, $floor_margin_nonneg$ — the
+- floor_log10, floor_margin_decades, floor_margin_nonneg — the
   proof-relevant margin, so each certificate self-documents its own validity;
 - survivor and prime-complete-survivor counts (exact — never capped), the global
   minimum representative, partition details for any survivors;
@@ -209,11 +209,11 @@ output directory. The JSON records:
   timing, and a SHA-256 of the log for integrity.
 
 Sample certified results are in
-[$CRT_Pruning_Survey_results/$](CRT_Pruning_Survey_results).
+[CRT_Pruning_Survey_results/](CRT_Pruning_Survey_results).
 
 A clean, proof-relevant certificate at level ω satisfies, in its JSON:
-$all_pruned_certificate$ (or at least $census_certificate$) $= true$,
-$run_clean = true$, and $floor_margin_nonneg = true$.
+$all_pruned_certificate$ (or at least census_certificate) = true,
+run_clean = true, and floor_margin_nonneg = true.
 
 ---
 
@@ -235,7 +235,7 @@ regimes, and this program covers the first directly:
   unsatisfiable. The longer the certified base case runs, the deeper that handoff
   sits inside already-exhausted territory.
 
-The companion enumerator $LCm_Solver$ certifies the complementary low-ω range by
+The companion enumerator LCm_Solver certifies the complementary low-ω range by
 the Lehmer–Clements method; together the two cover the finite base case that the
 asymptotic argument builds on.
 
