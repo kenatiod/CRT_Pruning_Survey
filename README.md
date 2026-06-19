@@ -13,7 +13,8 @@ For each census level ω it surveys, it produces a *hereditary certificate*: a
 machine-checkable statement that no prime-complete pair $m(m+1)$ exists below a
 stated bound, at that level **and every level above it**. Run across a contiguous
 range of ω, the certificates form a wall that the smooth-pair "ceiling" cannot
-climb back over — the structural fact that makes high-ω re-entry impossible.
+climb back over — the structural fact that makes high-ω resumption of solutions
+(re-entry) impossible.
 
 ---
 
@@ -32,8 +33,8 @@ question is whether any exist at higher ω. Because $m$ and $m+1$ are coprime, a
 prime-complete pair corresponds to a **partition** of the census $P_ω = A ⊔ B$,
 with the primes in $A$ dividing $m$ and those in $B$ dividing $m+1$. Each
 partition fixes a residue class of $m$ modulo $M_ω$ by the Chinese Remainder
-Theorem. So the entire question at level ω is: *does any of the $2^ω − 2$
-non-degenerate CRT classes contain a prime-complete $m$?*
+Theorem. So the entire question at level ω is: does any of the $2^ω − 2$
+non-degenerate CRT classes contain a prime-complete $m$?
 
 ---
 
@@ -45,7 +46,7 @@ over a precomputed CRT idempotent basis, the **minimal positive representative**
 $n_{A,B}$ of each class modulo $M_ω$. Each representative $≤ B$ is then tested,
 in the worker, for the intrinsic prime-completeness of $m(m+1)$.
 
-The two degenerate masks (all-$A$, all-$B$) are excluded soundly: their minimal
+The two degenerate masks (all-A, all-B) are excluded soundly: their minimal
 positive representatives are $M_ω$ and $M_ω − 1$, both $> B$ whenever $B < M_ω$.
 
 ### The floor that makes it finite
@@ -66,16 +67,16 @@ unbounded range, and it is the quantity the safety margin is measured against
 
 Each run records, in its result JSON, whichever of these it can prove:
 
-- **all-pruned certificate** — *no integer $m$ with $1 ≤ m ≤ B$ satisfies
-  $p | m(m+1)$ for every $p ≤ p_ω$.* The strongest form: every CRT class was
+- **all-pruned certificate** — no integer $m$ with $1 ≤ m ≤ B$ satisfies
+  $p | m(m+1)$ for every $p ≤ p_ω$. The strongest form: every CRT class was
   surveyed and none produced a candidate at or below $B$.
-- **census certificate** — *no prime-complete pair $(m, m+1)$ with $m ≤ B$
-  exists at any level $≥ ω$.* Holds whenever no surviving representative passes
+- **census certificate** — no prime-complete pair $(m, m+1)$ with $m ≤ B$
+  exists at any level $≥ ω$. Holds whenever no surviving representative passes
   the intrinsic prime-completeness check, even if some raw survivors exist.
 
 **Both are hereditary.** Adding the (ω+1)-th prime's congruence only refines the
 existing classes, so class minima are non-decreasing in ω: a certificate proved
-at $ω₀$ holds for every $ω ≥ ω₀$ at the same bound $B$. One run buys an infinite
+at $ω₀$ holds for every $ω ≥ ω₀$ at the same bound B. One run buys an infinite
 tail of levels.
 
 ---
