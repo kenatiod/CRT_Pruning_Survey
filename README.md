@@ -55,7 +55,7 @@ A prime-complete pair of order ω factors as $m(m+1) = M_ω · jk$ with $j, k �
 so $m(m+1) ≥ M_ω$ and therefore
 
 $$
-m ≥ √M_ω − 1.       (the "floor")
+m ≥ √M_ω − 1. \text{           (the "floor")}
 $$
 
 This is an exact, unconditional lower bound on where a prime-complete pair could
@@ -100,7 +100,7 @@ certificate otherwise:
    *sound*, but not necessarily *meaningful*: as ω grows the floor $√M_ω$ rises,
    and a fixed bound eventually drops below it, certifying only a range in which
    the floor identity already guarantees no pair can lie. v4 measures and records
-   the **margin above the floor**, $log₁₀(B) − ½·log₁₀(M_ω)$, and can hold it
+   the **margin above the floor**, $log_{10}(B) − ½·log_{10}(M_ω)$, and can hold it
    uniform across a whole run (see --floor_margin). A certificate is
    proof-relevant only when this margin is $≥ 0$, and carries the intended safety
    factor when it is comfortably positive.
@@ -150,7 +150,7 @@ This sets $log_{10}(B) = ½·log_{10}(M_ω) + 6$ per level, so every certificate
 run is six decades clear of the floor. --min_floor_margin stops the run cleanly
 the moment that margin cannot be held.
 
-Add $--dry_run$ to print the pre-flight table — floor, bound, $B < M$, and the
+Add --dry_run to print the pre-flight table — floor, bound, $B < M$, and the
 margin above the floor for each ω — and exit without surveying. Always worth
 running first before a long job.
 
