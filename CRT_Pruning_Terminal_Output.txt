@@ -1,0 +1,22 @@
+ken@deuy:~$ python3 CRT_Pruning_Survey_v4.py --start_omega 41 --end_omega 45 --floor_margin 3
+[+] CRT_Pruning_Survey version 4
+[+] omega range: [41, 42, 43, 44, 45]
+[+] bound policy: per-omega, 3.0 decades ABOVE the floor sqrt(M_omega) (uniform margin)
+[+] survivor storage caps: 1000/task, 100000 aggregate (counting and census checks are uncapped)
+[+] workers=16  chunk_size=1  task_log2=22
+[+] outdir: CRT_Pruning_Survey_v4_results
+
+  omega   log10(M)     floor   log10(B)   B<M?  margin>floor    status
+  ----------------------------------------------------------------------
+     41      70.47     35.24      39.00    YES          3.76        OK
+     42      72.73     36.37      40.00    YES          3.63        OK
+     43      75.01     37.51      41.00    YES          3.49        OK
+     44      77.30     38.65      42.00    YES          3.35        OK
+     45      79.59     39.80      43.00    YES          3.20        OK
+
+[+] start: 2026-06-22T00:50:51+00:00
+
+[>] omega=41  pmax= 179  M_digits= 71  survivors=           0  pc=0  min_n_crt=10^57.63  time=2119.73min  floor_margin=3.76dec  *** ALL-PRUNED CERTIFICATE (hereditary) ***
+[>] omega=42  pmax= 181  M_digits= 73  survivors=           0  pc=0  min_n_crt=10^60.69  time=4333.50min  floor_margin=3.63dec  *** ALL-PRUNED CERTIFICATE (hereditary) ***
+[>] omega=43  pmax= 191  M_digits= 76  survivors=           0  pc=0  min_n_crt=10^61.75  time=8628.93min  floor_margin=3.49dec  *** ALL-PRUNED CERTIFICATE (hereditary) ***
+
