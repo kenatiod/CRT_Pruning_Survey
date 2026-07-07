@@ -1,8 +1,8 @@
 {
   "M_digits": 66,
   "all_partitions_pruned": true,
-  "bound": 100000000000000000000000000000000000000000000000000,
-  "bound_str": "100000000000000000000000000000000000000000000000000",
+  "bound": 1000000000000000000000000000000000000,
+  "bound_str": "1000000000000000000000000000000000000",
   "cap_statistics": {
     "survivor_cap_hit": false,
     "survivor_count_is_exact": true,
@@ -10,18 +10,21 @@
     "survivors_capped_per_task": 1000,
     "survivors_capped_total": 100000
   },
-  "census_prime_count": 54,
-  "census_prime_max": 251,
+  "census_prime_count": 42,
+  "census_prime_max": 181,
   "certificates": {
     "all_pruned_certificate": true,
-    "all_pruned_statement": "For every level omega' >= 39: no integer m with 1 <= m <= 10^50.0 satisfies p | m(m+1) for all p <= 167 (hence no prime-complete pair).  Hereditary by refinement of congruence systems.",
+    "all_pruned_statement": "For every level omega' >= 39: no integer m with 1 <= m <= 10^36.0 satisfies p | m(m+1) for all p <= 167 (hence no prime-complete pair).  Hereditary by refinement of congruence systems.",
     "census_certificate": true,
-    "census_statement": "For every level omega' >= 39: no prime-complete pair (m, m+1) with m <= 10^50.0 exists.  Each surviving class has exactly one member <= B (B < M), every such member was checked for intrinsic prime-completeness, and none passed.  Independent of storage caps; hereditary by refinement.",
+    "census_statement": "For every level omega' >= 39: no prime-complete pair (m, m+1) with m <= 10^36.0 exists.  Each surviving class has exactly one member <= B (B < M), every such member was checked for intrinsic prime-completeness, and none passed.  Independent of storage caps; hereditary by refinement.",
     "heredity_lemma": "Adding the (omega+1)-th prime's congruence refines every class, so class minima are nondecreasing in omega and any certificate at omega_0 holds for all omega >= omega_0 at the same bound."
   },
   "chunk_size": 1,
-  "elapsed_sec": 19920.38982987404,
+  "elapsed_sec": 31716.623195648193,
   "errors": [],
+  "floor_log10": 32.9918,
+  "floor_margin_decades": 3.0082,
+  "floor_margin_nonneg": true,
   "global_min_n_crt": 495711871395964329449930765914455544572580011386222729,
   "global_min_n_crt_str": "495711871395964329449930765914455544572580011386222729",
   "global_min_partition": {
@@ -70,18 +73,18 @@
     ]
   },
   "log10_M": 65.9836,
-  "log10_bound": 50.0,
+  "log10_bound": 36.0,
   "log10_global_min": 53.6952,
   "omega": 39,
   "pc_storage_cap_hit": false,
-  "platform": "macOS-26.4-arm64-arm-64bit",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
   "pmax": 167,
   "prime_complete_details": [],
   "prime_complete_survivors": 0,
-  "program": "CRT_Prune_Survey",
+  "program": "CRT_Pruning_Survey",
   "run_clean": true,
-  "run_utc": "2026-06-12T07:08:05+00:00",
-  "sha256_log": "76acdcdb0c195f801df1ece5687df82a3f9667d4f9d740138dd8f98f8250a155",
+  "run_utc": "2026-06-19T15:03:24+00:00",
+  "sha256_log": "955dc6780a0963355154b280e6085ae530e6f8d70a6f4dc993fd2665ad677f33",
   "split_H": 17,
   "split_L": 22,
   "survivor_details": [],
@@ -90,5 +93,5 @@
   "tasks_total": 131072,
   "total_steps": 549755813888,
   "valid_partitions": 549755813886,
-  "version": 3
+  "version": 4
 }

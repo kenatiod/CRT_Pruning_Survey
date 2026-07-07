@@ -20,7 +20,7 @@
     "heredity_lemma": "Adding the (omega+1)-th prime's congruence refines every class, so class minima are nondecreasing in omega and any certificate at omega_0 holds for all omega >= omega_0 at the same bound."
   },
   "chunk_size": 1,
-  "elapsed_sec": 0.009895563125610352,
+  "elapsed_sec": 0.017041683197021484,
   "errors": [],
   "floor_log10": 4.9054,
   "floor_margin_decades": 3.0946,
@@ -48,16 +48,16 @@
   "log10_global_min": 5.8623,
   "omega": 10,
   "pc_storage_cap_hit": false,
-  "platform": "Linux-6.12.25+rpt-rpi-2712-aarch64-with-glibc2.36",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
   "pmax": 29,
   "prime_complete_details": [],
   "prime_complete_survivors": 0,
   "program": "CRT_Pruning_Survey",
   "run_clean": true,
-  "run_utc": "2026-06-18T17:37:51+00:00",
-  "sha256_log": "2b1f932951232c46cb28319921a3f678360e813525ea268f5e312b3d358e4695",
-  "split_H": 4,
-  "split_L": 6,
+  "run_utc": "2026-06-18T21:26:10+00:00",
+  "sha256_log": "ec3ae15d309cc78a357e133894f2ea618f13dff0afb24e6341f3e3a3be7ba753",
+  "split_H": 6,
+  "split_L": 4,
   "survivor_details": [
     {
       "mask": 212,
@@ -355,8 +355,8 @@
     }
   ],
   "survivors": 14,
-  "tasks_done": 16,
-  "tasks_total": 16,
+  "tasks_done": 64,
+  "tasks_total": 64,
   "total_steps": 1024,
   "valid_partitions": 1022,
   "version": 4
