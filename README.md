@@ -3,7 +3,7 @@
 **A pure Chinese-Remainder-Theorem survey that rules out prime-complete products
 of consecutive integers at high census levels — no Pell solver required.**
 
-This program supplies one half of the computational evidence behind the
+This program supplies a high ω range part of the computational evidence behind the
 conjecture that
 
 > **633,555 × 633,556 is the last prime-complete product of two consecutive
@@ -21,7 +21,7 @@ climb back over — the structural fact that makes high-ω resumption of solutio
 ## Background: prime-complete pairs and the census
 
 Fix ω and let $P_ω = {2, 3, 5, …, p_ω}$ be the first ω primes, with primorial
-$M_ω = 2·3·5···p_ω$. A pair of consecutive integers $m, m+1$ is **prime-complete
+$M_ω = 2·3·5···p_ω$. A pair of consecutive integers $m, (m+1)$ is **prime-complete
 at level ω** when every census prime divides the product and no larger prime does:
 
 $$
@@ -34,14 +34,14 @@ prime-complete pair corresponds to a **partition** of the census $P_ω = A ⊔ B
 with the primes in $A$ dividing $m$ and those in $B$ dividing $m+1$. Each
 partition fixes a residue class of $m$ modulo $M_ω$ by the Chinese Remainder
 Theorem. So the entire question at level ω is: does any of the $2^ω − 2$
-non-degenerate CRT classes contain a prime-complete $m$?
+non-degenerate CRT classes contain a prime-complete $m(m+1)$?
 
 ---
 
 ## What the program does
 
 For each ω the survey enumerates all valid partitions $A ⊔ B = P_ω$ (bit *i* of a
-mask = 1 means $p_i | m+1$, else $p_i | m$) and computes, by a Gray-code sweep
+mask = 1 means $p_i | (m+1)$, else $p_i | m$) and computes, by a Gray-code sweep
 over a precomputed CRT idempotent basis, the **minimal positive representative**
 $n_{A,B}$ of each class modulo $M_ω$. Each representative $≤ B$ is then tested,
 in the worker, for the intrinsic prime-completeness of $m(m+1)$.
