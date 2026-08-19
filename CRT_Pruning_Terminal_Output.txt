@@ -1,3 +1,4 @@
+
 ken@deuy:~$ python3 CRT_Pruning_Survey_v4.py --start_omega 41 --end_omega 45 --floor_margin 3
 [+] CRT_Pruning_Survey version 4
 [+] omega range: [41, 42, 43, 44, 45]
@@ -20,4 +21,6 @@ ken@deuy:~$ python3 CRT_Pruning_Survey_v4.py --start_omega 41 --end_omega 45 --f
 [>] omega=42  pmax= 181  M_digits= 73  survivors=           0  pc=0  min_n_crt=10^60.69  time=4333.50min  floor_margin=3.63dec  *** ALL-PRUNED CERTIFICATE (hereditary) ***
 [>] omega=43  pmax= 191  M_digits= 76  survivors=           0  pc=0  min_n_crt=10^61.75  time=8628.93min  floor_margin=3.49dec  *** ALL-PRUNED CERTIFICATE (hereditary) ***
 [>] omega=44  pmax= 193  M_digits= 78  survivors=           0  pc=0  min_n_crt=10^63.98  time=16890.35min  floor_margin=3.35dec  *** ALL-PRUNED CERTIFICATE (hereditary) ***
+[>] omega=45  pmax= 197  M_digits= 80  survivors=           0  pc=0  min_n_crt=10^65.85  time=34474.52min  floor_margin=3.20dec  *** ALL-PRUNED CERTIFICATE (hereditary) ***
 
+[+] Finished. 2026-08-07T04:17:53+00:00
